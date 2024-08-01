@@ -1,4 +1,4 @@
-from classes import Model, Data
+from service.classes import Model, Data
 
 from joblib import dump
 
@@ -19,7 +19,7 @@ def train():
         stuf = file.read()
         for j in range(len(stuf)):
             if stuf[j] == ' ' or stuf[j] == ';':
-                files.append(buffer)
+                files.append(buffer + '.')
                 buffer = ''
             else:
                 buffer = buffer + stuf[j]
